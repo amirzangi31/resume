@@ -2,3 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
+.base {
+  @apply bg-bg-body text-text-primary;
+}
+/*----------------------------------Btns---------------------------------------------*/
+.btn {
+  @apply px-8 py-2  rounded-lg;
+}
+
+.btn-primary {
+  @apply bg-primary text-white transition-all duration-300;
+}
+.btn-primary:hover {
+  @apply bg-white text-primary;
+}
+
+/*----------------------------------Btns---------------------------------------------*/
+
+
+/*----------------------------------main---------------------------------------------*/
+main{
+    min-height: calc(100vh - 224px);
+}
+/*----------------------------------main---------------------------------------------*/
+
+/*----------------------------------Logo---------------------------------------------*/
+.logo {
+  @apply text-white font-bold flex justify-center items-center;
+}
+.logo p::first-letter {
+  @apply text-3xl text-text-primary;
+}
+/*----------------------------------Logo---------------------------------------------*/
+
+/*----------------------------------navigation---------------------------------------------*/
+.navigation {
+}
+.navigation__menu {
+  @apply flex justify-center items-center gap-8;
+}
+.navigation__item {
+  @apply relative transition-all duration-300;
+}
+.navigation__item::after {
+  @apply transition-all duration-300;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  display: block;
+}
+.navigation__item:hover {
+  @apply text-white;
+}
+.navigation__item:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  display: block;
+}
+.navigation__item.active {
+  @apply text-white;
+}
+.navigation__item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  display: block;
+}
+/*----------------------------------navigation---------------------------------------------*/

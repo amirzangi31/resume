@@ -1,4 +1,6 @@
+import Footer from '@/components/layout/Footer'
 import './globals.css'
+import Header from '@/components/layout/Header'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,10 +11,17 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      <body className={`${inter.className} base`}>
+        <Header />
+        <main >
+          <div className="container mx-auto py-4 flex justify-between items-center px-2">
+            {children}
+          </div>
+        </main>
+        <Footer /> 
       </body>
     </html>
   )
