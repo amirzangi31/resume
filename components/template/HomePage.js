@@ -103,15 +103,15 @@ export default function HomePage() {
         <div className="card w-full md:w-9/12 h-full flex  justify-between items-start flex-col md:flex-row gap-4">
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
             <p className="text-3xl text-white text-center">01</p>
-            <p className="text-sm uppercase text-primary  text-center">asdkbvasdklb</p>
+            <p className="text-sm uppercase   text-center">asdkbvasdklb</p>
           </div>
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
             <p className="text-3xl text-white text-center">01</p>
-            <p className="text-sm uppercase text-primary  text-center">asdkbvasdklb</p>
+            <p className="text-sm uppercase   text-center">asdkbvasdklb</p>
           </div>
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
             <p className="text-3xl text-white text-center">01</p>
-            <p className="text-sm uppercase text-primary  text-center">asdkbvasdklb</p>
+            <p className="text-sm uppercase   text-center">asdkbvasdklb</p>
           </div>
         </div>
       </div>
