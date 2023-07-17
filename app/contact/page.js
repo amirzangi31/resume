@@ -1,8 +1,11 @@
+import SiteLoader from '@/components/modules/SiteLoader'
 import React from 'react'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div>
+      <SiteLoader /> 
+    </div>
   )
 }
 

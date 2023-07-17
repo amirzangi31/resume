@@ -15,9 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} base`}>
+        
         <Header />
         <main >
-          <div className="container mx-auto py-4 flex justify-between items-center px-2">
+          <div className="container mx-auto p-4">
             {children}
           </div>
         </main>

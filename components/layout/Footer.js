@@ -7,7 +7,7 @@ import Navigation from "./Navigation";
 function Footer() {
   return (
     <footer>
-      <div className="container mx-auto py-4 flex justify-between items-center px-2">
+      <div className="container mx-auto p-4 flex justify-between items-center ">
         <div className="w-full mx-auto">
           <div className="flex justify-center items-center w-full">
             <Logo />

@@ -17,7 +17,8 @@ module.exports = {
       colors: {
         "bg-body": "#0F0F0F",
         "text-primary": "#9f9f9f",
-        primary : "#323232"
+        primary : "#323232",
+        secondary : "#5B78F6",
       }
     },
   },

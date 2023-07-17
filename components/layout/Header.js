@@ -13,7 +13,7 @@ const pathname = usePathname()
 
   return (
     <header>
-      <div className="container mx-auto py-4 flex justify-between items-center px-2">
+      <div className="container mx-auto p-4 flex justify-between items-center ">
        <Logo /> 
         <Navigation /> 
         <div>
