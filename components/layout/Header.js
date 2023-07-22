@@ -6,7 +6,7 @@ import Logo from "../modules/Logo";
 import Navigation from "./Navigation";
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrClose } from 'react-icons/gr'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 function Header() {
   const [showMenu, setShowMenu] = useState(false)
@@ -16,6 +16,11 @@ function Header() {
   const showMenuHandler = () => {
     setShowMenu(!showMenu)
   }
+
+  useEffect(() => {
+      setShowMenu(false)
+  } , [pathname])
+
 
 
 

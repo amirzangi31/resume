@@ -138,9 +138,9 @@ function WorksPage() {
 
             React is a popular JavaScript library for building user interfaces. It allows developers to create interactive and reusable components that can update efficiently and smoothly. React uses a virtual DOM (document object model) to efficiently update only the parts of the UI that need to be changed, resulting in faster and more responsive applications.
 
-            One key concept in React is the component-based architecture, where the UI is broken down into smaller, reusable components that can be combined to build complex user interfaces. These components can have their own state and lifecycle methods, making it easier to manage the UI's state and behavior.
+            One key concept in React is the component-based architecture, where the UI is broken down into smaller, reusable components that can be combined to build complex user interfaces. These components can have their own state and lifecycle methods, making it easier to manage the UIs state and behavior.
 
-            React also promotes a declarative programming style, where developers describe what the UI should look like based on its current state, rather than imperatively defining each step of the UI's update. This makes the code more predictable and easier to reason about.
+            React also promotes a declarative programming style, where developers describe what the UI should look like based on its current state, rather than imperatively defining each step of the UIs update. This makes the code more predictable and easier to reason about.
 
             React is widely used for building single-page applications, as well as mobile applications using React Native. It has a large and active community, with many resources and libraries available to help developers build robust and efficient applications.
 
@@ -195,9 +195,9 @@ function WorksPage() {
             <span>REACT : </span>
             React is a popular JavaScript library for building user interfaces. It allows developers to create interactive and reusable components that can update efficiently and smoothly. React uses a virtual DOM (document object model) to efficiently update only the parts of the UI that need to be changed, resulting in faster and more responsive applications.
 
-            One key concept in React is the component-based architecture, where the UI is broken down into smaller, reusable components that can be combined to build complex user interfaces. These components can have their own state and lifecycle methods, making it easier to manage the UI's state and behavior.
+            One key concept in React is the component-based architecture, where the UI is broken down into smaller, reusable components that can be combined to build complex user interfaces. These components can have their own state and lifecycle methods, making it easier to manage the UIs state and behavior.
 
-            React also promotes a declarative programming style, where developers describe what the UI should look like based on its current state, rather than imperatively defining each step of the UI's update. This makes the code more predictable and easier to reason about.
+            React also promotes a declarative programming style, where developers describe what the UI should look like based on its current state, rather than imperatively defining each step of the UIs update. This makes the code more predictable and easier to reason about.
 
             React is widely used for building single-page applications, as well as mobile applications using React Native. It has a large and active community, with many resources and libraries available to help developers build robust and efficient applications.
 
@@ -242,9 +242,9 @@ function WorksPage() {
 
             React is a popular JavaScript library for building user interfaces. It allows developers to create interactive and reusable components that can update efficiently and smoothly. React uses a virtual DOM (document object model) to efficiently update only the parts of the UI that need to be changed, resulting in faster and more responsive applications.
 
-            One key concept in React is the component-based architecture, where the UI is broken down into smaller, reusable components that can be combined to build complex user interfaces. These components can have their own state and lifecycle methods, making it easier to manage the UI's state and behavior.
+            One key concept in React is the component-based architecture, where the UI is broken down into smaller, reusable components that can be combined to build complex user interfaces. These components can have their own state and lifecycle methods, making it easier to manage the UIs state and behavior.
 
-            React also promotes a declarative programming style, where developers describe what the UI should look like based on its current state, rather than imperatively defining each step of the UI's update. This makes the code more predictable and easier to reason about.
+            React also promotes a declarative programming style, where developers describe what the UI should look like based on its current state, rather than imperatively defining each step of the UIs update. This makes the code more predictable and easier to reason about.
 
             React is widely used for building single-page applications, as well as mobile applications using React Native. It has a large and active community, with many resources and libraries available to help developers build robust and efficient applications.
           </p>
@@ -440,6 +440,52 @@ function WorksPage() {
               <p className="uppercase text-xs font-bold">show case</p>
               <p className="text-white text-xl font-bold capitalize">
                 form (react js)
+              </p>
+            </div>
+          </div>
+          <div >
+            <button
+              type="button"
+              className="btn btn-primary text-center w-full"
+              onClick={() => setActiveModal(4)}
+
+            >
+              Details
+            </button>
+          </div>
+          <div className="grid grid-cols-2 gap-2 mt-2">
+            <a
+              href="https://github.com/amirzangi31/form_project"
+              rel="noreferrer"
+              target="_blank"
+              className="btn-sm btn-secondary text-center"
+            >
+              Live
+            </a>
+            <a
+              href="https://github.com/amirzangi31/form_project"
+              className="btn-sm btn-secondary text-center"
+            >
+              Source
+            </a>
+          </div>
+        </div>
+        <div className="card card-project ">
+          <div className="image-box__project">
+            <Image
+              src="/project5.png"
+              width={400}
+              height={400}
+              alt="sign"
+              className="w-full rounded-3xl"
+            />
+          </div>
+
+          <div className="flex justify-between items-start gap-2 mt-2">
+            <div className="flex justify-between items-start flex-col gap-2">
+              <p className="uppercase text-xs font-bold">show case</p>
+              <p className="text-white text-xl font-bold capitalize">
+                resume (next js)
               </p>
             </div>
           </div>

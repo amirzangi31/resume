@@ -13,7 +13,6 @@
   @apply px-2 py-1  rounded-lg;
 }
 
-
 .btn-primary {
   @apply bg-primary text-white transition-all duration-300;
 }
@@ -155,8 +154,6 @@ main {
   -webkit-animation: image-project 7s ease infinite alternate;
 }
 
-
-
 @keyframes image-project {
   0% {
     transform: translateY(0);
@@ -285,33 +282,32 @@ main {
 }
 /*----------------------------------profile card---------------------------------------------*/
 
-
 /*----------------------------------modal---------------------------------------------*/
-.modal{
-  @apply px-4 w-screen h-screen fixed -top-full left-0 flex justify-center items-center  ;
+.modal {
+  @apply px-4 w-screen h-screen fixed left-0 flex justify-center items-center;
+  top: -180%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 101;
 }
 
-.modal.active{
-  @apply top-0;
+.modal.active {
+  top: 0;
 }
 
-.modal p span{
+.modal p span {
   @apply font-bold text-secondary;
 }
 
-
-.modal__content{
-  @apply card bg-primary w-full ;
+.modal__content {
+  @apply card bg-primary w-full;
   max-width: 800px;
-  
+
   max-height: calc(100vh - 30px);
 }
-.modal__content-inner{
-  @apply w-full px-4  pb-8 ;
+.modal__content-inner {
+  @apply w-full px-4  pb-8;
   max-height: calc(100vh - 30px);
 
   overflow-y: scroll;
-  }
+}
 /*----------------------------------modal---------------------------------------------*/
