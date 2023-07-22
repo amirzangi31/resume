@@ -33,7 +33,7 @@ function Header() {
           <GiHamburgerMenu className="text-2xl" />
         </div>
         <div className="hidden md:block">
-          <Link href={"/contact"}  className="btn btn-primary font-bold">Lets talk</Link>
+          <a href={"/resume.pdf"}  className="btn btn-primary font-bold" download>Resume</a>
         </div>
       </div>
     </header>

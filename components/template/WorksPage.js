@@ -252,6 +252,38 @@ function WorksPage() {
       </Modal>
       {/* form */}
 
+      {/* resume */}
+      <Modal show={activeModal ===5} setShow={setActiveModal}>
+        <div className="text-white">
+        <p className="my-4">
+            <span>Next js : </span>
+            A Next.js-powered e-commerce website utilizes the techniques of SSG
+            (Static Site Generation), SSR (Server Side Rendering), and ISR
+            (Incremental Static Regeneration).
+          </p>
+          <p className="my-4">
+            <span>SSG : </span>
+            SSG refers to generating static pages during the website build
+            process. This means that when the update frequency is not high, the
+            pages are automatically generated and cached. On the next request,
+            the server uses the cached version of the pages. This approach
+            provides faster and more efficient performance.
+          </p>
+          <p className="my-4">
+          <span>TAILWIND : </span>
+
+            In addition to that, Tailwind CSS has been used. Tailwind CSS is a
+            utility-first CSS framework that enables rapid development by
+            providing a set of ready-to-use CSS classes. It allows developers to
+            build UI components quickly and efficiently by applying these
+            classes directly in their markup. Tailwind CSS also promotes a
+            highly customizable approach, enabling developers to easily create
+            unique designs without writing custom CSS code.
+          </p>
+        </div>
+      </Modal>
+      {/* resume */}
+
 
 
 
@@ -493,7 +525,7 @@ function WorksPage() {
             <button
               type="button"
               className="btn btn-primary text-center w-full"
-              onClick={() => setActiveModal(4)}
+              onClick={() => setActiveModal(5)}
 
             >
               Details
@@ -501,7 +533,7 @@ function WorksPage() {
           </div>
           <div className="grid grid-cols-2 gap-2 mt-2">
             <a
-              href="https://github.com/amirzangi31/form_project"
+              href="https://resume-zangiabadi.iran.liara.run"
               rel="noreferrer"
               target="_blank"
               className="btn-sm btn-secondary text-center"
@@ -509,7 +541,7 @@ function WorksPage() {
               Live
             </a>
             <a
-              href="https://github.com/amirzangi31/form_project"
+              href="https://github.com/amirzangi31/resume"
               className="btn-sm btn-secondary text-center"
             >
               Source

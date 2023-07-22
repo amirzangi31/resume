@@ -73,6 +73,16 @@ function ContactPage() {
               <PiWhatsappLogoThin className="text-3xl" />
             </a>
           </div>
+          <div className="mt-5">
+
+            <a
+              href={"/resume.pdf"}
+              className="btn btn-primary w-full block text-center"
+              download
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
         <div className="w-full md:w-8/12">
           <div className="form">
@@ -103,6 +113,7 @@ function ContactPage() {
             </div>
           </div>
         </div>
+
       </section>
     </>
   );

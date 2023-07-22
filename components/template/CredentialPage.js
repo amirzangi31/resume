@@ -46,12 +46,13 @@ function CredentialPage() {
           </a>
         </div>
         <div className="mt-8">
-          <Link
-            href={"/contact"}
+          <a
+            href={"/resume.pdf"}
             className="btn btn-primary w-full block text-center"
+            download
           >
-            Contact
-          </Link>
+            Download Resume
+          </a>
         </div>
       </div>
       <div className="w-full md:w-8/12">
