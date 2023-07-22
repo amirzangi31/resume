@@ -1,16 +1,23 @@
+
+
 import SiteLoader from "@/components/modules/SiteLoader";
+
+
 import Image from "next/image";
 import Link from "next/link";
+
 
 import { FaInstagram } from "react-icons/fa";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 
+
 export default function HomePage() {
+
   return (
     <>
       <SiteLoader />
       <div className="row grid gap-4 grid-cols-1 md:grid-cols-2 ">
-        <div>
+        <div >
           <Link
             href={"/about"}
             className="card flex justify-between items-center  flex-col gap-2 md:flex-row  h-full"
@@ -19,11 +26,11 @@ export default function HomePage() {
               <Image src={"/me.png"} alt="dsa" width={200} height={200} />
             </div>
             <div className=" px-2 flex-1 text-center md:text-left">
-              <p className="uppercase">a web designer</p>
+              <p className="uppercase">a web development</p>
               <p className="text-xl text-white font-bold">Amir mohammad</p>
               <p className="text-xl text-white font-bold">Zangi Abadi</p>
               <p className="capitalize">I am a front-end developer in Kerman</p>
-              
+
             </div>
           </Link>
         </div>
@@ -32,7 +39,7 @@ export default function HomePage() {
             hello! wellcome to my website
           </div>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2  h-full ">
-            <Link href={"/"} className="card">
+            <Link href={"/credential"} className="card" >
               <Image
                 src="/sign.png"
                 width={400}
@@ -47,10 +54,10 @@ export default function HomePage() {
                     credential
                   </p>
                 </div>
-                
+
               </div>
             </Link>
-            <Link href={"/"} className="card">
+            <Link href={"/works"} className="card" >
               <Image
                 src="/my-works.png"
                 width={400}
@@ -65,7 +72,7 @@ export default function HomePage() {
                     projects
                   </p>
                 </div>
-                
+
               </div>
             </Link>
           </div>
@@ -74,21 +81,25 @@ export default function HomePage() {
       <div className="row-one flex justify-between items-start flex-col md:flex-row-reverse gap-4 mt-4">
         <div className="card w-full md:w-3/12 h-full">
           <div className="card flex justify-between items-center">
-            <Link
-              href={"/"}
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={"https://www.instagram.com/a_m__i___rrr"}
               className="p-4 border border-white rounded-full text-white z-50 transition-all duration-300 hover:bg-white hover:text-primary"
             >
               <FaInstagram className="text-3xl" />
-            </Link>
-            <Link
-              href={"/"}
+            </a>
+            <a
+              href={"https://www.t.me/amir_zzzzz7"}
+              rel="noreferrer"
+              target="_blank"
               className="p-4 border border-white rounded-full text-white z-50 transition-all duration-300 hover:bg-white hover:text-primary"
             >
               <PiTelegramLogoDuotone className="text-3xl" />
-            </Link>
+            </a>
           </div>
           <Link
-            href={"/"}
+            href={"/about"}
             className="flex justify-between items-start gap-2 mt-1"
           >
             <div className="flex justify-between items-start flex-col gap-2">
@@ -97,37 +108,39 @@ export default function HomePage() {
                 profiles
               </p>
             </div>
-           
+
           </Link>
         </div>
         <div className="card w-full md:w-9/12 h-full flex  justify-between items-start flex-col md:flex-row gap-4">
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
-            <p className="text-3xl text-white text-center">01</p>
-            <p className="text-sm uppercase   text-center">asdkbvasdklb</p>
+            <p className="text-3xl text-white text-center">4</p>
+            <p className="text-sm uppercase   text-center">Total <br />
+              Projects</p>
           </div>
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
-            <p className="text-3xl text-white text-center">01</p>
-            <p className="text-sm uppercase   text-center">asdkbvasdklb</p>
+            <p className="text-3xl text-white text-center">2</p>
+            <p className="text-sm uppercase   text-center">Years <br />
+              Experience</p>
           </div>
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
-            <p className="text-3xl text-white text-center">01</p>
-            <p className="text-sm uppercase   text-center">asdkbvasdklb</p>
+            <p className="text-3xl text-white text-center">10</p>
+            <p className="text-sm uppercase   text-center">CLIENTS <br />
+              WORLDWIDE</p>
           </div>
         </div>
       </div>
       <div className="row mt-4 block ">
         <Link href={"/contact"} className="card relative block">
-            <Image src={"/icon2.png"} width={40} height={40} alt="icon" className="absolute top-0 left-10" />
-            <span  className="mt-20 flex justify-between items-center " >
-                <span>
-                    <p className="uppercase text-white text-3xl font-bold">lets</p>
-                    <p className="uppercase text-white text-3xl font-bold">works <span className="lowercase text-secondary">togather</span></p>
-                </span>
-                
+          <Image src={"/icon2.png"} width={40} height={40} alt="icon" className="absolute top-0 left-10" />
+          <span className="mt-20 flex justify-between items-center " >
+            <span>
+              <p className="uppercase text-white text-3xl font-bold">lets</p>
+              <p className="uppercase text-white text-3xl font-bold">works <span className="lowercase text-secondary">togather</span></p>
             </span>
+
+          </span>
         </Link>
       </div>
     </>
   );
 }
- 

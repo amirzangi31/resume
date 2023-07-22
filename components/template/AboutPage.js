@@ -56,18 +56,15 @@ function AboutPage() {
                   Amir mohammad zangiabadi
                 </p>
                 <p className="text-white">
-                  I am a San francisco-based product designer with a focus on
-                  web design, illustration, a visual development. I have a
-                  diverse range of experience having worked across various
-                  fields and industries.
+                  I am Amir Mohammad Zangi Abadi, a programmer and interested in developing web pages, my expertise is in the field of analysis, design and implementation of web programs. For me, quality is important along with speed.
                 </p>
               </span>
             </span>
           </div>
         </div>
       </header>
-      <section className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div className="card">
+      <section className="mt-4 grid grid-cols-1  gap-2">
+        {/* <div className="card">
           <p className="uppercase text-white ">EXPERIENCE</p>
           <div className="mt-2">
             <p>2007 - 2017</p>
@@ -83,27 +80,21 @@ function AboutPage() {
             </p>
             <p>Bluebase Designs</p>
           </div>
-        </div>
+        </div> */}
         <div className="card">
           <p className="uppercase text-white ">EDUCATION</p>
           <div className="mt-2">
-            <p>2007 - 2017</p>
+            <p>1395 - 1397</p>
             <p className="text-white font-bold text-lg">
-              Framer Designer & Developer
+            Drawing Architecture
             </p>
-            <p>Bluebase Designs</p>
+            <p>Shahid Chamran Vocational Technical University, Kerman</p>
           </div>
-          <div className="mt-2">
-            <p>2007 - 2017</p>
-            <p className="text-white font-bold text-lg">
-              Framer Designer & Developer
-            </p>
-            <p>Bluebase Designs</p>
-          </div>
+          
         </div>
       </section>
       <section className="flex justify-between items-start flex-col md:flex-row gap-2 mt-4">
-        <Link href={"/"} className="card w-full md:w-3/12">
+        <Link href={"/works"} className="card w-full md:w-3/12">
           <Image
             src="/my-works.png"
             width={400}
@@ -139,7 +130,7 @@ function AboutPage() {
           </span>
         </Link>
 
-        <Link href={"/"} className="card w-full md:w-3/12">
+        <Link href={"/credential"} className="card w-full md:w-3/12">
           <Image
             src="/sign.png"
             width={400}

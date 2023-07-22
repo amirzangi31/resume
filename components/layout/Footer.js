@@ -13,7 +13,7 @@ function Footer() {
             <Logo />
           </div>
           <div className="flex justify-center items-center w-full mt-4">
-            <Navigation />
+            <Navigation footer={true}  />
           </div>
           <div className="w-full text-center mt-5 ">
             <p>© All rights reserved by <span className="text-white underline">Amirmohammad Zangiabadi</span></p>
