@@ -12,7 +12,7 @@ function CredentialPage() {
       <section className="flex justify-between items-start flex-col md:flex-row gap-8 relative">
         <div className="card w-full md:w-4/12 profile-card">
           <div className="image-box rounded-3xl overflow-hidden">
-            <Image src={"/me.png"} width={400} height={400} alt="profile" />
+            <Image src={"/test-13.png"} width={400} height={400} alt="profile" />
           </div>
           <div className="mt-6">
             <p className="text-lg text-white font-bold capitalize text-center">

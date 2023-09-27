@@ -13,7 +13,7 @@ function AboutPage() {
         <div className="w-8/12 md:w-4/12 card">
           <div className="overflow-hidden rounded-3xl image-box">
             <Image
-              src={"/me2.png"}
+              src={"/test-13.png"}
               alt="dsa"
               width={400}
               height={400}
@@ -124,7 +124,7 @@ function AboutPage() {
             <span>
               <p className="uppercase text-white text-3xl font-bold">lets</p>
               <p className="uppercase text-white text-3xl font-bold">
-                works <span className="lowercase text-secondary">togather</span>
+                works <span className="lowercase text-secondary">together</span>
               </p>
             </span>
           </span>

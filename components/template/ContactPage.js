@@ -1,14 +1,83 @@
-import React from "react";
+"use client"
+import { useState } from 'react'
 import SiteLoader from "../modules/SiteLoader";
-import Link from "next/link";
+
 
 import { CiMail, CiLocationOn } from "react-icons/ci";
 import { BsTelephone } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { PiTelegramLogoLight, PiWhatsappLogoThin } from "react-icons/pi";
 import Image from "next/image";
+import toast, { Toaster } from 'react-hot-toast';
+import { ThreeDots } from 'react-loader-spinner';
 
 function ContactPage() {
+  
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+  const [loading, setLoading] = useState(false)
+
+
+  const changeHandler = e => {
+    const { name, value } = e.target
+
+    setForm({
+      ...form,
+      [name]: value
+    })
+
+  }
+
+
+  const submitHandler = async () => {
+    if (!form.name || !form.email || !form.subject || !form.message) {
+      toast.error("invalid data", {
+
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
+      })
+    } else {
+      setLoading(true)
+      const res = await fetch("https://amlak-zangiabadi.iran.liara.run/api/together", {
+        method: "POST",
+        body: JSON.stringify(form)
+      })
+      const data = await res.json()
+      setLoading(false)
+      if (data.error) {
+        toast.error("There was a problem with the server, please try again", {
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        })
+      } else {
+        toast.success("Request sent successfully", {
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        })
+        setForm({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        })
+      }
+    }
+  }
+
+
   return (
     <>
       <SiteLoader />
@@ -98,23 +167,40 @@ function ContactPage() {
             </p>
             <div className="mt-12">
               <div className="form__control">
-                <input type="text" placeholder="Name*" />
+                <input type="text" name="name" value={form.name} placeholder="Name*" onChange={changeHandler} />
               </div>
               <div className="form__control">
-                <input type="text" placeholder="Email*" />
+                <input type="text" name="email" value={form.email} placeholder="Email*" onChange={changeHandler} />
               </div>
               <div className="form__control">
-                <input type="text" placeholder="Your Subject*" />
+                <input type="text" name="subject" value={form.subject} placeholder="Your Subject*" onChange={changeHandler} />
               </div>
               <div className="form__control">
-                <textarea placeholder="Your Message *" cols="30" rows="7"></textarea>
+                <textarea name="message" value={form.message} placeholder="Your Message *" cols="30" rows="7" onChange={changeHandler} ></textarea>
               </div>
-              <button type="button" className="btn btn-primary w-full capitalize">send message</button>
+
+
+
+              <button type="button" disabled={loading} className="btn btn-primary w-full capitalize flex justify-center items-center" onClick={submitHandler} >
+
+                {loading ? <ThreeDots
+                  width="60"
+                  height="20"
+                  radius="9"
+                  color="#5B78F6"
+                  ariaLabel="three-dots-loading"
+                /> : "send message"}
+
+              </button>
+
+
+
             </div>
           </div>
         </div>
-
+        <Toaster />
       </section>
+      
     </>
   );
 }

@@ -43,7 +43,7 @@ function WorksPage() {
             provides faster and more efficient performance.
           </p>
           <p className="my-4">
-          <span>SSR : </span>
+            <span>SSR : </span>
 
             SSR, on the other hand, generates HTML on each request, which allows
             the server to render React components and send the fully rendered
@@ -51,7 +51,7 @@ function WorksPage() {
             date.
           </p>
           <p className="my-4">
-          <span>ISR : </span>
+            <span>ISR : </span>
 
             Finally, ISR brings the best of both SSG and SSR. With ISR, you can
             statically generate parts of your page while also specifying a time
@@ -61,7 +61,7 @@ function WorksPage() {
           </p>
 
           <p className="my-4">
-          <span>PAGES : </span>
+            <span>PAGES : </span>
 
             Overall, the combination of SSG, SSR, and ISR in a Next.js
             e-commerce website helps achieve fast loading times, better SEO, and
@@ -72,7 +72,7 @@ function WorksPage() {
           </p>
 
           <p className="my-4">
-          <span>TAILWIND : </span>
+            <span>TAILWIND : </span>
 
             In addition to that, Tailwind CSS has been used. Tailwind CSS is a
             utility-first CSS framework that enables rapid development by
@@ -84,7 +84,7 @@ function WorksPage() {
           </p>
 
           <p className="my-4">
-          <span>REDUX : </span>
+            <span>REDUX : </span>
 
             In addition, Redux has been used as a state management tool. Redux
             is a predictable state container for JavaScript apps that helps
@@ -94,7 +94,7 @@ function WorksPage() {
           </p>
 
           <p className="my-4">
-          <span>TIPTAP : </span>
+            <span>TIPTAP : </span>
 
             Tiptap is a modern and extensible rich text editor framework built
             with Vue.js. It provides a set of customizable and reusable
@@ -238,7 +238,7 @@ function WorksPage() {
       <Modal show={activeModal === 4} setShow={setActiveModal}>
         <div className="text-white">
           <p className="my-4">
-          <span>REACT : </span>
+            <span>REACT : </span>
 
             React is a popular JavaScript library for building user interfaces. It allows developers to create interactive and reusable components that can update efficiently and smoothly. React uses a virtual DOM (document object model) to efficiently update only the parts of the UI that need to be changed, resulting in faster and more responsive applications.
 
@@ -253,9 +253,9 @@ function WorksPage() {
       {/* form */}
 
       {/* resume */}
-      <Modal show={activeModal ===5} setShow={setActiveModal}>
+      <Modal show={activeModal === 5} setShow={setActiveModal}>
         <div className="text-white">
-        <p className="my-4">
+          <p className="my-4">
             <span>Next js : </span>
             A Next.js-powered e-commerce website utilizes the techniques of SSG
             (Static Site Generation), SSR (Server Side Rendering), and ISR
@@ -270,7 +270,7 @@ function WorksPage() {
             provides faster and more efficient performance.
           </p>
           <p className="my-4">
-          <span>TAILWIND : </span>
+            <span>TAILWIND : </span>
 
             In addition to that, Tailwind CSS has been used. Tailwind CSS is a
             utility-first CSS framework that enables rapid development by
@@ -283,6 +283,65 @@ function WorksPage() {
         </div>
       </Modal>
       {/* resume */}
+
+      {/* amlak */}
+      <Modal show={activeModal === 6} setShow={setActiveModal}>
+        <div className="text-white">
+          <p className="my-4">
+            <span>Next js : </span>
+            A Next.js-powered e-commerce website utilizes the techniques of SSG
+            (Static Site Generation), SSR (Server Side Rendering), and ISR
+            (Incremental Static Regeneration).
+          </p>
+          <p className="my-4">
+            <span>SSR : </span>
+
+            SSR, on the other hand, generates HTML on each request, which allows
+            the server to render React components and send the fully rendered
+            page to the client. This ensures that the content is always up to
+            date.
+          </p>
+          <p className="my-4">
+            <span>LAST VERSION NEXT : </span>
+            The latest version of Next.js is 13.4.13, released on August 8, 2023. This version includes a number of new features and improvements, including:
+
+            Built-in SEO support for the App Router. This makes it easy to add SEO metadata to your pages, such as title, description, and Open Graph tags.
+            Route handlers. This allows you to define custom logic for handling routes, such as authentication or authorization.
+            MDX for Server Components. This makes it easy to use MDX, a popular format for combining Markdown and React, in your server components.
+            Rust MDX parser. This provides a faster and more efficient MDX parser for Next.js.
+            Improved error overlay. The error overlay has been improved to provide more information about errors, such as the stack trace and the line number where the error occurred.
+            Statically typed links (beta). This allows you to statically type links in your code, which can help to prevent errors.
+            Turbopack improvements (alpha). Turbopack is Next.jss new rendering engine, and this version includes a number of improvements, such as better performance and support for dynamic imports.
+            Next.js Cache (beta). This new feature allows you to cache the output of your Next.js application, which can improve performance and reduce bandwidth usage.
+          </p>
+          <p className="my-4">
+            <span>NEXT AUTH : </span>
+
+            The latest version of NextAuth.js is 4.23.0, released on August 12, 2023. This version includes a number of new features and improvements, including:
+
+            Passage by 1Password integration: NextAuth.js now supports the Passage by 1Password authentication provider. This allows users to sign in to your application using their 1Password credentials.
+            Improved TypeScript support: The TypeScript support in NextAuth.js has been improved in this version. This makes it easier to use NextAuth.js with TypeScript projects.
+            Bug fixes: A number of bugs have been fixed in this version, including a bug that prevented users from signing in using the Apple provider.
+            Overall, NextAuth.js 4.23.0 is a significant release that includes a number of new features and improvements. If you are using NextAuth.js, I recommend upgrading to this version.
+          </p>
+          <p className="my-4">
+            <span>GENERATE META DATA : </span>
+
+            The generateMetadata function in Next.js is used to define dynamic metadata for a page or layout. Metadata is information about a page that is used by search engines and other applications to index and display the page. It can include things like the title, description, keywords, and canonical URL.
+          </p>
+          <p className="my-4">
+            <span>MONGO DB: </span>
+
+
+            MongoDB is a document-oriented database management system (DBMS) that uses JSON-like documents with dynamic schemas. This makes it very flexible and scalable, and it is a popular choice for modern web applications.
+
+            MongoDB stores data in collections, which are similar to tables in traditional relational databases. However, documents in a MongoDB collection can have different schemas, which means that they do not need to have the same columns. This makes it very easy to store and query semi-structured and unstructured data.
+
+            MongoDB is also horizontally scalable, which means that it can be easily scaled by adding more servers. This makes it a good choice for applications that need to handle large amounts of data.
+          </p>
+        </div>
+      </Modal>
+      {/* amlak */}
 
 
 
@@ -542,6 +601,56 @@ function WorksPage() {
             </a>
             <a
               href="https://github.com/amirzangi31/resume"
+              rel="noreferrer"
+              target="_blank"
+              className="btn-sm btn-secondary text-center"
+            >
+              Source
+            </a>
+          </div>
+        </div>
+        <div className="card card-project ">
+          <div className="image-box__project">
+            <Image
+              src="/project6.png"
+              width={400}
+              height={400}
+              alt="sign"
+              className="w-full rounded-3xl"
+            />
+          </div>
+
+          <div className="flex justify-between items-start gap-2 mt-2">
+            <div className="flex justify-between items-start flex-col gap-2">
+              <p className="uppercase text-xs font-bold">show case</p>
+              <p className="text-white text-xl font-bold capitalize">
+                Amlak (next js)
+              </p>
+            </div>
+          </div>
+          <div >
+            <button
+              type="button"
+              className="btn btn-primary text-center w-full"
+              onClick={() => setActiveModal(6)}
+
+            >
+              Details
+            </button>
+          </div>
+          <div className="grid grid-cols-2 gap-2 mt-2">
+            <a
+              href="https://amlak-zangiabadi.iran.liara.run"
+              rel="noreferrer"
+              target="_blank"
+              className="btn-sm btn-secondary text-center"
+            >
+              Live
+            </a>
+            <a
+              href="https://github.com/amirzangi31/amlak_project"
+              rel="noreferrer"
+              target="_blank"
               className="btn-sm btn-secondary text-center"
             >
               Source

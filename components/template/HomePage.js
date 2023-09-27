@@ -22,8 +22,8 @@ export default function HomePage() {
             href={"/about"}
             className="card flex justify-between items-center  flex-col gap-2 md:flex-row  h-full"
           >
-            <div className="overflow-hidden rounded-tl-3xl rounded-br-3xl w-50 image-box">
-              <Image src={"/me.png"} alt="dsa" width={200} height={200} />
+            <div className="overflow-hidden rounded-tl-3xl rounded-br-3xl  md:w-50 image-box">
+              <Image src={"/test-13.png"} alt="dsa" width={200} height={200}  />
             </div>
             <div className=" px-2 flex-1 text-center md:text-left">
               <p className="uppercase">a web development</p>
@@ -113,7 +113,7 @@ export default function HomePage() {
         </div>
         <div className="card w-full md:w-9/12 h-full flex  justify-between items-start flex-col md:flex-row gap-4">
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
-            <p className="text-3xl text-white text-center">4</p>
+            <p className="text-3xl text-white text-center">6</p>
             <p className="text-sm uppercase   text-center">Total <br />
               Projects</p>
           </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
           <span className="mt-20 flex justify-between items-center " >
             <span>
               <p className="uppercase text-white text-3xl font-bold">lets</p>
-              <p className="uppercase text-white text-3xl font-bold">works <span className="lowercase text-secondary">togather</span></p>
+              <p className="uppercase text-white text-3xl font-bold">works <span className="lowercase text-secondary">together</span></p>
             </span>
 
           </span>
