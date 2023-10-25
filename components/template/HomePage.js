@@ -25,10 +25,12 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-tl-3xl rounded-br-3xl  md:w-50 image-box">
               <Image src={"/test-13.png"} alt="dsa" width={200} height={200}  />
             </div>
-            <div className=" px-2 flex-1 text-center md:text-left">
+            <div className=" px-2 flex-1 text-center md:text-left flex justify-center items-start flex-col gap-2">
               <p className="uppercase">a web development</p>
-              <p className="text-xl text-white font-bold">Amir mohammad</p>
+             <div>
+             <p className="text-xl text-white font-bold">Amir mohammad</p>
               <p className="text-xl text-white font-bold">Zangi Abadi</p>
+             </div>
               <p className="capitalize">I am a front-end developer in Kerman</p>
 
             </div>

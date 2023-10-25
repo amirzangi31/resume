@@ -5,6 +5,41 @@
 .base {
   @apply bg-bg-body text-text-primary overflow-x-hidden;
 }
+
+
+/*----------------------------------Scrolls---------------------------------------------*/
+
+::-webkit-scrollbar {
+
+  width: 10px;
+  height: 10px;
+  /* Customize the scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+  /* Customize the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary/50 rounded-[10px] ;
+  /* Customize the scrollbar thumb */
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+  /* Customize the scrollbar thumb */
+}
+
+
+
+/*----------------------------------Scrolls---------------------------------------------*/
+
+
+
+
+
+
+
 /*----------------------------------Btns---------------------------------------------*/
 .btn {
   @apply px-8 py-2  rounded-lg;
