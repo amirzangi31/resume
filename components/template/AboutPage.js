@@ -1,11 +1,17 @@
+"use client"
+
 import React from "react";
 import SiteLoader from "../modules/SiteLoader";
 import Image from "next/image";
-import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
-import { PiTelegramLogoDuotone } from "react-icons/pi";
+import ProjectCard from "../modules/ProjectCard";
+import LetsCard from "../modules/LetsCard";
+import CredentialCard from "../modules/CredentialCard";
+import { useTranslations } from "use-intl";
 
 function AboutPage() {
+  
+  const t =useTranslations("aboutPage")
+  const e = useTranslations("education")
   return (
     <>
       <SiteLoader />
@@ -31,7 +37,7 @@ function AboutPage() {
               className="w-16"
             />
             <p className="uppercase text-white font-bold big-text">
-              self-summary
+              {t("title")}
             </p>
             <Image
               width={400}
@@ -53,10 +59,10 @@ function AboutPage() {
             <span className="mt-20 flex justify-between items-center ">
               <span>
                 <p className="uppercase text-secondary text-xl font-bold">
-                  Amir mohammad zangiabadi
+                  {t("name")}
                 </p>
                 <p className="text-white">
-                  I am Amir Mohammad Zangi Abadi, a programmer and interested in developing web pages, my expertise is in the field of analysis, design and implementation of web programs. For me, quality is important along with speed.
+                  {t("desc")}
                 </p>
               </span>
             </span>
@@ -82,71 +88,29 @@ function AboutPage() {
           </div>
         </div> */}
         <div className="card">
-          <p className="uppercase text-white ">EDUCATION</p>
+          <p className="uppercase text-white ">{e("title")}</p>
           <div className="mt-2">
             <p>1395 - 1397</p>
             <p className="text-white font-bold text-lg">
-            Drawing Architecture
+            {e("study")}
             </p>
-            <p>Shahid Chamran Vocational Technical University, Kerman</p>
+            <p>{e("uni")}</p>
           </div>
           
         </div>
       </section>
       <section className="flex justify-between items-start flex-col md:flex-row gap-2 mt-4">
-        <Link href={"/works"} className="card w-full md:w-3/12">
-          <Image
-            src="/my-works.png"
-            width={400}
-            height={400}
-            alt="sign"
-            className="w-full"
-          />
-          <div className="flex justify-between items-start gap-2">
-            <div className="flex justify-between items-start flex-col gap-2">
-              <p className="uppercase text-xs font-bold">show case</p>
-              <p className="text-white text-xl font-bold capitalize">
-                projects
-              </p>
-            </div>
-          </div>
-        </Link>
-
-        <Link href={"/contact"} className="card relative block w-full md:w-6/12">
-          <Image
-            src={"/icon2.png"}
-            width={40}
-            height={40}
-            alt="icon"
-            className="absolute top-0 left-10"
-          />
-          <span className="mt-20 flex justify-between items-center ">
-            <span>
-              <p className="uppercase text-white text-3xl font-bold">lets</p>
-              <p className="uppercase text-white text-3xl font-bold">
-                works <span className="lowercase text-secondary">together</span>
-              </p>
-            </span>
-          </span>
-        </Link>
-
-        <Link href={"/credential"} className="card w-full md:w-3/12">
-          <Image
-            src="/sign.png"
-            width={400}
-            height={400}
-            alt="sign"
-            className="w-full"
-          />
-          <div className="flex justify-between items-start gap-2">
-            <div className="flex justify-between items-start flex-col gap-2">
-              <p className="uppercase text-xs font-bold">more about me</p>
-              <p className="text-white text-xl font-bold capitalize">
-                credential
-              </p>
-            </div>
-          </div>
-        </Link>
+        <div className="content-about w-full md:w-3/12">
+            <ProjectCard /> 
+        </div>
+        <div className="content-about w-full md:w-6/12">
+            <LetsCard /> 
+        </div>
+        <div className="content-about w-full md:w-3/12">
+            <CredentialCard /> 
+        </div>
+        
+        
       </section>
     </>
   );

@@ -2,6 +2,9 @@ import Footer from '@/components/layout/Footer'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import { Inter } from 'next/font/google'
+import { NextIntlClientProvider, useLocale } from 'next-intl'
+import { notFound } from 'next/navigation'
+import {isRtlLang} from 'rtl-detect';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,12 +14,29 @@ export const metadata = {
   icons : {icon : "./favicon.ico"}
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children , params }) {
+
+  const local = useLocale()
+
+  const dir = isRtlLang(local)
+  
+  
+
+  if(params.locale !== local){
+    return notFound()
+  }
+  let messages;
+  try {
+    messages = (await import(`../../messages/${local}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
 
   return (
-    <html lang="en">
+    <html lang={local} dir={dir ? "rtl" : "ltr"}>
       <body className={`${inter.className} base`}>
         
+        <NextIntlClientProvider locale={local} messages={messages}>
         <Header />
         <main >
           <div className="container mx-auto p-4">
@@ -24,6 +44,7 @@ export default function RootLayout({ children }) {
           </div>
         </main>
         <Footer /> 
+        </NextIntlClientProvider>
       </body>
     </html>
   )

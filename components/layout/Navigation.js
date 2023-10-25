@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -5,6 +6,9 @@ import { GrClose } from 'react-icons/gr'
 
 function Navigation({ show, setShow, footer }) {
     const pathname = usePathname()
+    const t = useTranslations("menu")
+
+
 
     const closeHandler = () => {
         setShow(false)
@@ -17,19 +21,19 @@ function Navigation({ show, setShow, footer }) {
             </div>
             <ul className="navigation__menu">
                 <li className={`navigation__item ${pathname === "/" || pathname === "" ? "active" : ""}`}>
-                    <Link href={"/"}>Home</Link>
+                    <Link href={"/"}>{t("home")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/about") ? "active" : ""}`}>
-                    <Link href={"/about"}>About</Link>
+                    <Link href={"/about"}>{t("about")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/works") ? "active" : ""}`}>
-                    <Link href={"/works "}>Works</Link>
+                    <Link href={"/works "}>{t("works")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/credential") ? "active" : ""}`}>
-                    <Link href={"/credential"}>Credential</Link>
+                    <Link href={"/credential"}>{t("credential")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/contact") ? "active" : ""}`}>
-                    <Link href={"/contact"}>Contact</Link>
+                    <Link href={"/contact"}>{t("contact")}</Link>
                 </li>
             </ul>
         </nav >

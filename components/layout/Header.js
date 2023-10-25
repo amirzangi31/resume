@@ -7,9 +7,14 @@ import Navigation from "./Navigation";
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrClose } from 'react-icons/gr'
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+
 function Header() {
   const [showMenu, setShowMenu] = useState(false)
+
+const t = useTranslations("resume")
+
 
   const pathname = usePathname()
 
@@ -33,7 +38,7 @@ function Header() {
           <GiHamburgerMenu className="text-2xl" />
         </div>
         <div className="hidden md:block">
-          <a href={"/resume.pdf"}  className="btn btn-primary font-bold" download>Resume</a>
+          <a href={"/resume.pdf"}  className="btn btn-primary font-bold" download>{t("resume")}</a>
         </div>
       </div>
     </header>

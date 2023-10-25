@@ -1,0 +1,78 @@
+{
+    "homePage" : {
+        "wellcome" : "Hello! Wellcome To My Website" ,
+        "job" : "a web development",
+        "name" : "amirmohamad",
+        "lastName" : "zangiabadi",
+        "desc" : "I am a front-end developer in Kerman",
+        "profile" : "Profiles",
+        "credential" : "Credential",
+        "project" : "Projects",
+        "tprofile" : "stay with me",
+        "tcredential" : "more about me",
+        "tproject" : "show case",
+        "itemPOne" : "CLIENTS",
+        "itemPTwo" : "WORLDWIDE",
+        "itemYOne" : "YEARS",
+        "itemYTwo" : "EXPERIENCE",
+        "itemWOne" : "TOTAL",
+        "itemWTwo" : "PROJECT"
+    },
+    "aboutPage" : {
+        "title" : "SELF-SUMMARY",
+        "name" : "AMIR MOHAMMAD ZANGIABADI",
+        "desc" : "I am Amir Mohammad Zangi Abadi, a programmer and interested in developing web pages, my expertise is in the field of analysis, design and implementation of web programs. For me, quality is important along with speed."
+    },
+    "credentialPage":{
+        "name" :"Amirmohammad Zangiabadi",
+        "title" : "درباره من ",
+            "skills": "skills",
+        "descOne" : "I am Amir Mohammad Zangi Abadi, a programmer and interested in developing web pages, my expertise is in the field of analysis, design and implementation of web programs. For me, quality is important along with speed.",
+        "descTwo" : "I am interested in group work because it allows me to participate and exchange ideas with others. I am also able to share my experiences with others and benefit from their experiences. Working in a group is better and more effective to achieve goals and creates a team that supports each other. It gives me a sense of satisfaction and a stronger social connection. ",
+        "descThree" : "What is important to me is the commitment to get the job done as quickly as possible and the ability to achieve the best quality"
+    },
+    "contactPage" : {
+        "mail" :"Mail Us",
+        "contact" :"Contact Us",
+        "loc" :"laocation",
+        "media" :"social media",
+        "city" : "kerman , iran"
+    },
+    "toast" : {
+        "title" : "Request sent successfully"
+    },
+    "form" : {
+        "name" : "Name *",
+        "email" : "Email *",
+        "sub" : "Your Subject *",
+        "desc" : "Your Message *",
+        "send" : "Send Message"
+
+    },
+    "education" :{
+        "title" : "EDUCATION",
+        "study" : "Drawing Architecture",
+        "uni" : "Shahid Chamran Vocational Technical University, Kerman",
+        "desc" : "Architecture is the art and science of designing and constructing buildings and other physical structures. It involves the creative process of planning, designing, and constructing spaces that are functional, aesthetically pleasing, and sustainable. Architects use their knowledge of engineering, principles of design, and practical experience to create spaces that meet the needs of individuals and society. They consider various factors such as the site, materials, environmental impact, and cultural context to create structures that are both visually appealing and functional. Architecture plays a crucial role in shaping the built environment and has a significant impact on the way people live, work, and interact with their surroundings.  "
+    },
+   "menu" : {
+    "home" : "Home",
+    "works" : "Works",
+    "contact" : "Contact",
+    "about" : "About",
+    "credential" : "Credential"
+   },
+   "resume" : {
+    "resume" : "Resume"
+   },
+   "LETS" :{
+    "one" : "LETS",
+    "two" : "WORK",
+    "three" : "together"
+   },
+   "footer" :{
+    "name" : "Amirmohammad Zangiabadi",
+    "title" : "All rights reserved by "
+   }
+
+}

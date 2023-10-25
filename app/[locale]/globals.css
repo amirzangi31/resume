@@ -77,7 +77,7 @@ main {
 
 /*----------------------------------Logo---------------------------------------------*/
 .logo {
-  @apply text-white font-bold flex justify-center items-center;
+  @apply text-white font-bold flex justify-center items-center rtl:flex-row-reverse;
 }
 .logo p::first-letter {
   @apply text-3xl text-text-primary;
@@ -98,11 +98,11 @@ main {
 
 /*----------------------------------navigation---------------------------------------------*/
 .navigation {
-  @apply fixed  left-0 w-full  md:static md:w-auto bg-bg-body md:bg-transparent py-4 md:py-0 z-50 transition-all duration-500;
-  top: -100%;
+  @apply fixed -top-full left-0 w-full  md:static md:w-auto bg-bg-body md:bg-transparent py-4 md:py-0 z-50 transition-all duration-500;
+  
 }
 .navigation.active {
-  top: 0;
+  @apply top-0;
 }
 .navigation__menu {
   @apply flex justify-center items-center flex-col md:flex-row gap-8;
@@ -158,7 +158,7 @@ main {
 /*----------------------------------Card---------------------------------------------*/
 
 .card {
-  @apply p-6 relative   rounded-3xl overflow-hidden;
+  @apply p-6 relative   rounded-3xl overflow-hidden  ;
 }
 .card-one {
   @apply relative   rounded-3xl overflow-hidden;
@@ -180,9 +180,8 @@ main {
   );
 }
 .card-project .image-box__project {
-  @apply rounded-3xl;
-  height: 150px;
-  overflow: hidden;
+  @apply rounded-3xl h-[150px] overflow-hidden;
+  
 }
 .card-project img {
   animation: image-project 7s ease infinite alternate;
@@ -319,14 +318,14 @@ main {
 
 /*----------------------------------modal---------------------------------------------*/
 .modal {
-  @apply px-4 w-screen h-screen fixed left-0 flex justify-center items-center;
+  @apply px-4  w-screen h-screen fixed left-0 flex justify-center items-center;
   top: -180%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 101;
 }
 
 .modal.active {
-  top: 0;
+  @apply top-0;
 }
 
 .modal p span {
@@ -334,15 +333,19 @@ main {
 }
 
 .modal__content {
-  @apply card bg-primary w-full;
-  max-width: 800px;
+  @apply card bg-primary w-full max-w-[800px];
 
   max-height: calc(100vh - 30px);
 }
 .modal__content-inner {
-  @apply w-full px-4  pb-8;
+  @apply w-full px-4  pb-8 overflow-y-scroll;
   max-height: calc(100vh - 30px);
 
-  overflow-y: scroll;
 }
 /*----------------------------------modal---------------------------------------------*/
+
+/*----------------------------------content-about---------------------------------------------*/
+.content-about .card {
+    @apply w-full block ;
+}
+/*----------------------------------content-about---------------------------------------------*/

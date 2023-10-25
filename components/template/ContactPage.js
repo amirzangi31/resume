@@ -10,9 +10,15 @@ import { PiTelegramLogoLight, PiWhatsappLogoThin } from "react-icons/pi";
 import Image from "next/image";
 import toast, { Toaster } from 'react-hot-toast';
 import { ThreeDots } from 'react-loader-spinner';
+import { useTranslations } from 'next-intl';
 
 function ContactPage() {
   
+  const l = useTranslations("LETS")
+  const f = useTranslations("form")
+  const t = useTranslations("contactPage")
+  const r = useTranslations("resume")
+const to = useTranslations("toast")
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -60,7 +66,7 @@ function ContactPage() {
           },
         })
       } else {
-        toast.success("Request sent successfully", {
+        toast.success(to("title"), {
           style: {
             borderRadius: '10px',
             background: '#333',
@@ -88,8 +94,8 @@ function ContactPage() {
             <div className="card ">
               <CiMail className="text-2xl text-white " />
             </div>
-            <div className="mr-auto">
-              <p className="uppercase">mail us</p>
+            <div className="ltr:mr-auto rtl:ml-auto">
+              <p className="uppercase">{t("mail")}</p>
               <a href="mailto:zangiabadi1378888@gmail.com" className="text-white">
                 zangiabadi1378888@gmail.com
               </a>
@@ -99,8 +105,8 @@ function ContactPage() {
             <div className="card">
               <BsTelephone className="text-2xl text-white " />
             </div>
-            <div className="mr-auto">
-              <p className="uppercase">contact us</p>
+            <div className="ltr:mr-auto rtl:ml-auto">
+              <p className="uppercase">{t("contact")}</p>
               <a href="tel:09339727560" className="text-white">
                 +989339727560
               </a>
@@ -110,12 +116,12 @@ function ContactPage() {
             <div className="card">
               <CiLocationOn className="text-2xl text-white " />
             </div>
-            <div className="mr-auto">
-              <p className="uppercase">location </p>
-              <p className="text-white">kerman , iran</p>
+            <div className="ltr:mr-auto rtl:ml-auto">
+              <p className="uppercase">{t("loc")} </p>
+              <p className="text-white">{t("city")}</p>
             </div>
           </div>
-          <p className="text-white uppercase mt-4">social media</p>
+          <p className="text-white uppercase mt-4">{t("media")}</p>
           <div className="flex justify-start gap-2 items-start mt-4">
             <a
               rel="noreferrer"
@@ -149,7 +155,7 @@ function ContactPage() {
               className="btn btn-primary w-full block text-center"
               download
             >
-              Download Resume
+              {r("resume")}
             </a>
           </div>
         </div>
@@ -160,23 +166,23 @@ function ContactPage() {
               width={40}
               height={40}
               alt="icon"
-              className="absolute top-0 right-10"
+              className="absolute top-0 ltr:right-10 rtl:left-10"
             />
             <p className="text-3xl text-white font-bold">
-              Let’s work <span className="text-secondary">together</span>.
+              {l("one")} {l("two")} <span className="text-secondary">{l("three")}</span>.
             </p>
             <div className="mt-12">
               <div className="form__control">
-                <input type="text" name="name" value={form.name} placeholder="Name*" onChange={changeHandler} />
+                <input type="text" name="name" value={form.name} placeholder={f("name")} onChange={changeHandler} />
               </div>
               <div className="form__control">
-                <input type="text" name="email" value={form.email} placeholder="Email*" onChange={changeHandler} />
+                <input type="text" name="email" value={form.email} placeholder={f("email")} onChange={changeHandler} />
               </div>
               <div className="form__control">
-                <input type="text" name="subject" value={form.subject} placeholder="Your Subject*" onChange={changeHandler} />
+                <input type="text" name="subject" value={form.subject} placeholder={f("sub")} onChange={changeHandler} />
               </div>
               <div className="form__control">
-                <textarea name="message" value={form.message} placeholder="Your Message *" cols="30" rows="7" onChange={changeHandler} ></textarea>
+                <textarea name="message" value={form.message} placeholder={f("desc")} cols="30" rows="7" onChange={changeHandler} ></textarea>
               </div>
 
 
@@ -189,7 +195,7 @@ function ContactPage() {
                   radius="9"
                   color="#5B78F6"
                   ariaLabel="three-dots-loading"
-                /> : "send message"}
+                /> :f("send")}
 
               </button>
 

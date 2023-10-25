@@ -1,17 +1,25 @@
 
 
 import SiteLoader from "@/components/modules/SiteLoader";
+import { useTranslations } from "next-intl";
 
 
 import Image from "next/image";
 import Link from "next/link";
 
 
+
 import { FaInstagram } from "react-icons/fa";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
+import ProjectCard from "../modules/ProjectCard";
+import CredentialCard from "../modules/CredentialCard";
+import LetsCard from "../modules/LetsCard";
 
 
 export default function HomePage() {
+
+  const  t = useTranslations("homePage")
+
 
   return (
     <>
@@ -25,58 +33,24 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-tl-3xl rounded-br-3xl  md:w-50 image-box">
               <Image src={"/test-13.png"} alt="dsa" width={200} height={200}  />
             </div>
-            <div className=" px-2 flex-1 text-center md:text-left flex justify-center items-start flex-col gap-2">
-              <p className="uppercase">a web development</p>
+            <div className=" px-2 flex-1 text-center md:text-left md:rtl:text-right flex justify-center items-start flex-col gap-2">
+              <p className="uppercase">{t("job")}</p>
              <div>
-             <p className="text-xl text-white font-bold">Amir mohammad</p>
-              <p className="text-xl text-white font-bold">Zangi Abadi</p>
+             <p className="text-xl text-white font-bold">{t("name")}</p>
+              <p className="text-xl text-white font-bold">{t("lastName")}</p>
              </div>
-              <p className="capitalize">I am a front-end developer in Kerman</p>
+              <p className="capitalize rtl:text-right">{t("desc")}</p>
 
             </div>
           </Link>
         </div>
         <div className="flex justify-between items-center gap-2 flex-col">
           <div className="card-one p-4 text-center text-white w-full  capitalize font-bold">
-            hello! wellcome to my website
+            {t("wellcome")}
           </div>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2  h-full ">
-            <Link href={"/credential"} className="card" >
-              <Image
-                src="/sign.png"
-                width={400}
-                height={400}
-                alt="sign"
-                className="w-full"
-              />
-              <div className="flex justify-between items-start gap-2">
-                <div className="flex justify-between items-start flex-col gap-2">
-                  <p className="uppercase text-xs font-bold">more about me</p>
-                  <p className="text-white text-xl font-bold capitalize">
-                    credential
-                  </p>
-                </div>
-
-              </div>
-            </Link>
-            <Link href={"/works"} className="card" >
-              <Image
-                src="/my-works.png"
-                width={400}
-                height={400}
-                alt="sign"
-                className="w-full"
-              />
-              <div className="flex justify-between items-start gap-2">
-                <div className="flex justify-between items-start flex-col gap-2">
-                  <p className="uppercase text-xs font-bold">show case</p>
-                  <p className="text-white text-xl font-bold capitalize">
-                    projects
-                  </p>
-                </div>
-
-              </div>
-            </Link>
+            <CredentialCard />
+            <ProjectCard /> 
           </div>
         </div>
       </div>
@@ -105,9 +79,9 @@ export default function HomePage() {
             className="flex justify-between items-start gap-2 mt-1"
           >
             <div className="flex justify-between items-start flex-col gap-2">
-              <p className="uppercase text-xs font-bold">stay with me</p>
+              <p className="uppercase text-xs font-bold">{t("tprofile")}</p>
               <p className="text-white text-xl font-bold capitalize">
-                profiles
+                {t("profile")}
               </p>
             </div>
 
@@ -116,32 +90,23 @@ export default function HomePage() {
         <div className="card w-full md:w-9/12 h-full flex  justify-between items-start flex-col md:flex-row gap-4">
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
             <p className="text-3xl text-white text-center">6</p>
-            <p className="text-sm uppercase   text-center">Total <br />
-              Projects</p>
+            <p className="text-sm uppercase   text-center">{t("itemPOne")} <br />
+              {t("itemPTwo")}</p>
           </div>
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
             <p className="text-3xl text-white text-center">2</p>
-            <p className="text-sm uppercase   text-center">Years <br />
-              Experience</p>
+            <p className="text-sm uppercase   text-center">{t("itemYOne")} <br />
+              {t("itemYTwo")}</p>
           </div>
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
             <p className="text-3xl text-white text-center">10</p>
-            <p className="text-sm uppercase   text-center">CLIENTS <br />
-              WORLDWIDE</p>
+            <p className="text-sm uppercase   text-center">{t("itemWOne")} <br />
+              {t("itemWTwo")}</p>
           </div>
         </div>
       </div>
       <div className="row mt-4 block ">
-        <Link href={"/contact"} className="card relative block">
-          <Image src={"/icon2.png"} width={40} height={40} alt="icon" className="absolute top-0 left-10" />
-          <span className="mt-20 flex justify-between items-center " >
-            <span>
-              <p className="uppercase text-white text-3xl font-bold">lets</p>
-              <p className="uppercase text-white text-3xl font-bold">works <span className="lowercase text-secondary">together</span></p>
-            </span>
-
-          </span>
-        </Link>
+        <LetsCard /> 
       </div>
     </>
   );

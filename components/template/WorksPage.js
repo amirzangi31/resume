@@ -369,6 +369,7 @@ function WorksPage() {
         </div>
       </header>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4    gap-4        ">
+        
         <div className="card card-project ">
           <div className="image-box__project">
             <Image
@@ -417,6 +418,7 @@ function WorksPage() {
             </a>
           </div>
         </div>
+
         <div className="card card-project ">
           <div className="image-box__project">
             <Image
@@ -466,6 +468,7 @@ function WorksPage() {
             </a>
           </div>
         </div>
+
         <div className="card card-project ">
           <div className="image-box__project">
             <Image
@@ -515,6 +518,7 @@ function WorksPage() {
             </a>
           </div>
         </div>
+
         <div className="card card-project ">
           <div className="image-box__project">
             <Image
@@ -561,6 +565,7 @@ function WorksPage() {
             </a>
           </div>
         </div>
+
         <div className="card card-project ">
           <div className="image-box__project">
             <Image
@@ -592,7 +597,7 @@ function WorksPage() {
           </div>
           <div className="grid grid-cols-2 gap-2 mt-2">
             <a
-              href="https://resume-zangiabadi.iran.liara.run"
+              href="https://resume-zangiabdi.vecel.app"
               rel="noreferrer"
               target="_blank"
               className="btn-sm btn-secondary text-center"
@@ -609,6 +614,7 @@ function WorksPage() {
             </a>
           </div>
         </div>
+
         <div className="card card-project ">
           <div className="image-box__project">
             <Image
@@ -640,7 +646,7 @@ function WorksPage() {
           </div>
           <div className="grid grid-cols-2 gap-2 mt-2">
             <a
-              href="https://amlak-zangiabadi.iran.liara.run"
+              href="https://amlak-zangiabadi.vercel.app"
               rel="noreferrer"
               target="_blank"
               className="btn-sm btn-secondary text-center"
@@ -657,6 +663,7 @@ function WorksPage() {
             </a>
           </div>
         </div>
+
       </section>
     </>
   );
