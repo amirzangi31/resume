@@ -35,7 +35,7 @@ export default  function RootLayout({ children , params }) {
 
   return (
     <html lang={local} dir={dir ? "rtl" : "ltr"}>
-      <body className={`${inter.className} ${iranSans.className} base`}>
+      <body className={` ${iranSans.className} ${inter.className} base`}>
         
         
           <Layout local={local}>
