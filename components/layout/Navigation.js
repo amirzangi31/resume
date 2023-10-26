@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -9,7 +9,7 @@ import LangButton from '../element/LangButton'
 function Navigation({ show, setShow, footer }) {
     const pathname = usePathname()
     const t = useTranslations("menu")
-
+    const local = useLocale()
 
 
     const closeHandler = () => {
@@ -23,19 +23,19 @@ function Navigation({ show, setShow, footer }) {
             </div>
             <ul className="navigation__menu">
                 <li className={`navigation__item ${pathname === "/" || pathname === "" ? "active" : ""}`}>
-                    <Link href={"/"}>{t("home")}</Link>
+                    <Link href={`/${local}`}>{t("home")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/about") ? "active" : ""}`}>
-                    <Link href={"/about"}>{t("about")}</Link>
+                    <Link href={`/${local}/about`}>{t("about")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/works") ? "active" : ""}`}>
-                    <Link href={"/works "}>{t("works")}</Link>
+                    <Link href={`/${local}/works `}>{t("works")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/credential") ? "active" : ""}`}>
-                    <Link href={"/credential"}>{t("credential")}</Link>
+                    <Link href={`/${local}/credential`}>{t("credential")}</Link>
                 </li>
                 <li className={`navigation__item ${pathname.includes("/contact") ? "active" : ""}`}>
-                    <Link href={"/contact"}>{t("contact")}</Link>
+                    <Link href={`/${local}/contact`}>{t("contact")}</Link>
                 </li>
                 <li className={``}>
                     <LangButton /> 
