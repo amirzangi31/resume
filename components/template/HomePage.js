@@ -89,7 +89,7 @@ export default function HomePage() {
         </div>
         <div className="card w-full md:w-9/12 h-full flex  justify-between items-start flex-col md:flex-row gap-4">
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
-            <p className="text-3xl text-white text-center">6</p>
+            <p className="text-3xl text-white text-center">10</p>
             <p className="text-sm uppercase   text-center">{t("itemPOne")} <br />
               {t("itemPTwo")}</p>
           </div>
@@ -99,7 +99,7 @@ export default function HomePage() {
               {t("itemYTwo")}</p>
           </div>
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
-            <p className="text-3xl text-white text-center">10</p>
+            <p className="text-3xl text-white text-center">6</p>
             <p className="text-sm uppercase   text-center">{t("itemWOne")} <br />
               {t("itemWTwo")}</p>
           </div>

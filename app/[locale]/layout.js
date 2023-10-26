@@ -5,8 +5,13 @@ import { Inter } from 'next/font/google'
 import { NextIntlClientProvider, useLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
 import {isRtlLang} from 'rtl-detect';
+import iranSans from '@/fonts/iransans'
 
 const inter = Inter({ subsets: ['latin'] })
+
+
+
+
 
 export const metadata = {
   title: 'Amirmohammad Zangiabadi',
@@ -34,7 +39,7 @@ export default async function RootLayout({ children , params }) {
 
   return (
     <html lang={local} dir={dir ? "rtl" : "ltr"}>
-      <body className={`${inter.className} base`}>
+      <body className={`${inter.className} ${iranSans.className} base`}>
         
         <NextIntlClientProvider locale={local} messages={messages}>
         <Header />
