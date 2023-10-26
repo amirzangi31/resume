@@ -1,3 +1,5 @@
+"use client"
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -6,7 +8,10 @@ import React from 'react'
 const CredentialCard = () => {
     const t = useTranslations("homePage")
   return (
-    <Link href={"/credential"} className="card" >
+    <motion.div
+    whileTap={{scale : 0.9}}
+  >
+    <Link href={"/credential"} className="card w-full block" >
     <Image
       src="/sign.png"
       width={400}
@@ -24,6 +29,7 @@ const CredentialCard = () => {
 
     </div>
   </Link>
+  </motion.div>
   )
 }
 

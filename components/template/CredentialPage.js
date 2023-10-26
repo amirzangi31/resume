@@ -62,7 +62,7 @@ function CredentialPage() {
         </div>
         <div className="w-full md:w-8/12">
           <div>
-            <p className="text-white font-bold mb-4">ABOUT ME</p>
+            <p className="text-white font-bold mb-4 uppercase">{t("title")}</p>
             <p className="my-8">
               {t("descOne")}
             </p>

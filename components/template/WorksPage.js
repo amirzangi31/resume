@@ -292,7 +292,7 @@ function WorksPage() {
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4    gap-4        ">
         
       {worksData.map((item , index) => (
-          <WorkCard  {...item} modal={index+1} setActiveM={setActiveModal}  /> 
+          <WorkCard key={item.id}  {...item} modal={index+1} setActiveM={setActiveModal}  /> 
       ))}
 
 

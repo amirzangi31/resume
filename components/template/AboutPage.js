@@ -8,12 +8,21 @@ import LetsCard from "../modules/LetsCard";
 import CredentialCard from "../modules/CredentialCard";
 import { useTranslations } from "use-intl";
 
+
+
+
+
 function AboutPage() {
+
   
+  
+  
+
   const t =useTranslations("aboutPage")
   const e = useTranslations("education")
   return (
     <>
+
       <SiteLoader />
       <header className="flex justify-between items-center flex-col md:flex-row md:items-start gap-4">
         <div className="w-8/12 md:w-4/12 card">

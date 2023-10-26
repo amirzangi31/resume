@@ -8,11 +8,15 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrClose } from 'react-icons/gr'
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { useScroll , motion,useSpring } from "framer-motion";
+
 
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false)
-
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress)
+  
 const t = useTranslations("resume")
 
 
@@ -31,6 +35,7 @@ const t = useTranslations("resume")
 
   return (
     <header>
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="container mx-auto p-4 flex justify-between items-center ">
         <Logo />
         <Navigation show={showMenu} setShow={setShowMenu} />

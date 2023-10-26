@@ -1,11 +1,19 @@
+"use client"
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+
 const LetsCard = () => {
     const l = useTranslations("LETS")
   return (
+    <motion.div 
+      whileTap={{scale : 0.9}}
+    >
+
+
     <Link href={"/contact"} className="card relative block w-full">
     <Image src={"/icon2.png"} width={40} height={40} alt="icon" className="absolute top-0 left-10 rtl:right-10" />
     <span className="mt-20 flex justify-between items-center " >
@@ -15,6 +23,7 @@ const LetsCard = () => {
       </span>
     </span>
   </Link>
+  </motion.div>
   )
 }
 

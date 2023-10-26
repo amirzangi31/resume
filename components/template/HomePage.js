@@ -1,19 +1,15 @@
-
+"use client"
 
 import SiteLoader from "@/components/modules/SiteLoader";
 import { useTranslations } from "next-intl";
-
-
 import Image from "next/image";
 import Link from "next/link";
-
-
-
 import { FaInstagram } from "react-icons/fa";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 import ProjectCard from "../modules/ProjectCard";
 import CredentialCard from "../modules/CredentialCard";
 import LetsCard from "../modules/LetsCard";
+import { motion } from "framer-motion";
 
 
 export default function HomePage() {
@@ -25,7 +21,10 @@ export default function HomePage() {
     <>
       <SiteLoader />
       <div className="row grid gap-4 grid-cols-1 md:grid-cols-2 ">
-        <div >
+        <motion.div 
+          whileTap={{ scale: 0.9 }}
+          
+        >
           <Link
             href={"/about"}
             className="card flex justify-between items-center  flex-col gap-2 md:flex-row  h-full"
@@ -43,19 +42,24 @@ export default function HomePage() {
 
             </div>
           </Link>
-        </div>
+        </motion.div>
+
         <div className="flex justify-between items-center gap-2 flex-col">
           <div className="card-one p-4 text-center text-white w-full  capitalize font-bold">
             {t("wellcome")}
           </div>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2  h-full ">
+            
+              
             <CredentialCard />
+            
+            
             <ProjectCard /> 
           </div>
         </div>
       </div>
       <div className="row-one flex justify-between items-start flex-col md:flex-row-reverse gap-4 mt-4">
-        <div className="card w-full md:w-3/12 h-full">
+        <motion.div whileTap={{scale : 0.9}} className="card w-full md:w-3/12 h-full">
           <div className="card flex justify-between items-center">
             <a
               rel="noreferrer"
@@ -86,7 +90,7 @@ export default function HomePage() {
             </div>
 
           </Link>
-        </div>
+        </motion.div>
         <div className="card w-full md:w-9/12 h-full flex  justify-between items-start flex-col md:flex-row gap-4">
           <div className="card w-full md:w-4/12 h-full flex justify-center items-center flex-col gap-2">
             <p className="text-3xl text-white text-center">10</p>
