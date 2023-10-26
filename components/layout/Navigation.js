@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { GrClose } from 'react-icons/gr'
+import LangIcon from '../element/LangIcon'
+import LangButton from '../element/LangButton'
 
 function Navigation({ show, setShow, footer }) {
     const pathname = usePathname()
@@ -34,6 +36,9 @@ function Navigation({ show, setShow, footer }) {
                 </li>
                 <li className={`navigation__item ${pathname.includes("/contact") ? "active" : ""}`}>
                     <Link href={"/contact"}>{t("contact")}</Link>
+                </li>
+                <li className={``}>
+                    <LangButton /> 
                 </li>
             </ul>
         </nav >
