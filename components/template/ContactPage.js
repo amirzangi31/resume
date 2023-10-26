@@ -51,7 +51,7 @@ const to = useTranslations("toast")
       })
     } else {
       setLoading(true)
-      const res = await fetch("https://amlak-zangiabadi.iran.liara.run/api/together", {
+      const res = await fetch("https://amlak-zangiabadi.vercel.app/api/together", {
         method: "POST",
         body: JSON.stringify(form)
       })
