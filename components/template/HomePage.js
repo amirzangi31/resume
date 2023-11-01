@@ -1,7 +1,7 @@
 "use client"
 
 import SiteLoader from "@/components/modules/SiteLoader";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 export default function HomePage() {
 
   const  t = useTranslations("homePage")
-
+  const local = useLocale()
 
   return (
     <>
@@ -79,7 +79,7 @@ export default function HomePage() {
             </a>
           </div>
           <Link
-            href={"/about"}
+            href={`/${local}/about`}
             className="flex justify-between items-start gap-2 mt-1"
           >
             <div className="flex justify-between items-start flex-col gap-2">
