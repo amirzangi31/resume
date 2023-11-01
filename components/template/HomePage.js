@@ -26,7 +26,7 @@ export default function HomePage() {
           
         >
           <Link
-            href={"/about"}
+            href={`/${local}/about`}
             className="card flex justify-between items-center  flex-col gap-2 md:flex-row  h-full"
           >
             <div className="overflow-hidden rounded-tl-3xl rounded-br-3xl  md:w-50 image-box">
